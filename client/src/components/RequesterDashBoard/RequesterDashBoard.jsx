@@ -3,6 +3,7 @@ import "@/components/RequesterDashBoard/RequesterDashBoard.scss"
 import { FaPlus, FaList, FaCheck, FaTimes, FaUser } from 'react-icons/fa';
 import NewRequest from '../NewRequest/NewRequest';
 import AllRequest from '../AllRequest/AllRequest';
+import Profile from '../Profile/Profile';
 const RequesterDashBoard = () => {
     const [activeTab, setActiveTab] = useState('new-request');
 
@@ -18,7 +19,7 @@ const RequesterDashBoard = () => {
             case 'rejected-request':
                 return <div><h2>Rejected Request Component</h2></div>;
             case 'your-profile':
-                return <div><h2>Your Profile Component</h2></div>;
+                return <Profile/>;
             default:
                 return <NewRequest/>;
         }

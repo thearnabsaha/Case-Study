@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './AllRequest.scss';
+import './CAllRequest.scss';
 
-const AllRequest = () => {
+const CAllRequest = () => {
     const navigate = useNavigate();
 
     const initialData = [
@@ -52,7 +52,7 @@ const AllRequest = () => {
     });
 
     const handleRowClick = (requestID) => {
-        navigate(`/request-details/${requestID}`);
+        navigate(`/cr-details/${requestID}`);
     };
 
     return (
@@ -175,4 +175,4 @@ const AllRequest = () => {
     );
 };
 
-export default AllRequest;
+export default CAllRequest;

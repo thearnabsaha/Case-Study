@@ -3,7 +3,7 @@ import "@/components/NotFound/NotFound.scss"
 const NotFound = () => {
   return (
     <>
-<div className="mx-auto w-full max-w-7xl px-2 md:px-4 h-screen flex flex-col a">
+<div className=" w-screen h-screen flex flex-col a">
   <div className="my-12 flex items-center justify-center px-2 md:my-24 md:px-0">
     <div className="lg:flex lg:items-center lg:space-x-10">
       <img
