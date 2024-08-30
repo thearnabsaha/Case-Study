@@ -1,0 +1,102 @@
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--mgrey);
+    border-radius: 8px;
+  
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+  
+      label {
+        color: var(--vlgrey);
+        margin-bottom: 5px;
+      }
+  
+      input,
+      select {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid var(--lgrey);
+        background-color: var(--dgrey);
+        color: var(--white);
+      }
+    }
+  }
+  
+  body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+  }
+  
+  .all-requests {
+    padding: 20px;
+    background-color: var(--dgrey);
+    border-radius: 10px;
+  
+    h2 {
+      color: var(--yellow);
+      border-bottom: 2px solid var(--tangarine);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      text-align: center;
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      thead {
+        background-color: var(--mgrey);
+        color: var(--white);
+  
+        th {
+          padding: 12px;
+          text-align: left;
+          font-weight: bold;
+        }
+      }
+  
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: var(--mgrey);
+          }
+  
+          &:nth-child(odd) {
+            background-color: var(--lgrey);
+          }
+  
+          &:hover {
+            background-color: var(--orange);
+          }
+  
+          td {
+            padding: 12px;
+            color: var(--vlgrey);
+          }
+        }
+      }
+    }
+  
+    // Table border and hover effects
+    table {
+      border: 2px solid var(--orange);
+  
+      th,
+      td {
+        border: 1px solid var(--lgrey);
+      }
+  
+      tr:hover td {
+        border-color: var(--rose);
+      }
+    }
+  }
+  

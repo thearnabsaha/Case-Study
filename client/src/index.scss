@@ -1,0 +1,35 @@
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --yellow:#FFB600;
+    --tangarine:#ED8C00;
+    --orange:#D04A02;
+    --rose:#DB536A;
+    --red:#E0301E;
+    --black:#000;
+    --white:#FFF;
+    --dgrey:#2D2D2D;
+    --mgrey:#464646;
+    --lgrey:#7D7D7D;
+    --vlgrey:#DEDEDE;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
