@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Popup from "@/components/PopUps/PopUp.jsx";  // Ensure this component is properly imported
-import './CRDetails.scss';
+import './TRDetails.scss';
 
 const data = [
     { requestID: 1, territory: 'Japan', requesterName: 'John Doe', investmentType: 'Marketing', investmentAmount: 5000, requestStatus: 'Approved', cafAdmin: 'Alice Smith', budgetID: 'BUD123' },
@@ -10,7 +10,7 @@ const data = [
     // Add more data as required...
 ];
 
-const CRDetails = () => {
+const TRDetails = () => {
     const { requestID } = useParams();
     const navigate = useNavigate();
     const [requestDetails, setRequestDetails] = useState(() => data.find(req => req.requestID === parseInt(requestID, 10)));
@@ -54,4 +54,4 @@ const CRDetails = () => {
     );
 };
 
-export default CRDetails;
+export default TRDetails;

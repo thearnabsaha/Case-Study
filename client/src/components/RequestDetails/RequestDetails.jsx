@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './RequestDetails.scss';
-
+import { MdDateRange, MdPlace, MdPerson, MdBusinessCenter, MdAttachMoney, MdCheckCircle, MdTimer, MdAdminPanelSettings, MdAccountBalanceWallet } from 'react-icons/md';
 const data = [
     { requestID: 1, requestDate: '2024-08-01', territory: 'Japan', requesterName: 'John Doe', investmentType: 'Marketing', investmentAmount: 5000, requestStatus: 'Approved', approvalDate: '2024-08-10', cafAdmin: 'Alice Smith', budgetID: 'BUD123' },
     { requestID: 2, requestDate: '2024-08-02', territory: 'China', requesterName: 'Jane Smith', investmentType: 'IT', investmentAmount: 10000, requestStatus: 'Pending', approvalDate: '2024-08-15', cafAdmin: 'Bob Brown', budgetID: 'BUD124' },
@@ -35,15 +35,15 @@ const RequestDetails = () => {
         <div className="request-details">
             <h2>Request Details - ID: {requestDetails.requestID}</h2>
             <div className="details">
-                <p><strong>Request Date:</strong> {requestDetails.requestDate}</p>
-                <p><strong>Territory:</strong> {requestDetails.territory}</p>
-                <p><strong>Requester Name:</strong> {requestDetails.requesterName}</p>
-                <p><strong>Investment Type:</strong> {requestDetails.investmentType}</p>
-                <p><strong>Investment Amount:</strong> ${requestDetails.investmentAmount}</p>
-                <p><strong>Request Status:</strong> {requestDetails.requestStatus}</p>
-                <p><strong>Approval Date:</strong> {requestDetails.approvalDate}</p>
-                <p><strong>CAF Admin:</strong> {requestDetails.cafAdmin}</p>
-                <p><strong>Budget ID:</strong> {requestDetails.budgetID}</p>
+                <p><MdDateRange /> <strong>Request Date:</strong> {requestDetails.requestDate}</p>
+                <p><MdPlace /> <strong>Territory:</strong> {requestDetails.territory}</p>
+                <p><MdPerson /> <strong>Requester Name:</strong> {requestDetails.requesterName}</p>
+                <p><MdBusinessCenter /> <strong>Investment Type:</strong> {requestDetails.investmentType}</p>
+                <p><MdAttachMoney /> <strong>Investment Amount:</strong> ${requestDetails.investmentAmount}</p>
+                <p><MdCheckCircle /> <strong>Request Status:</strong> {requestDetails.requestStatus}</p>
+                <p><MdTimer /> <strong>Approval Date:</strong> {requestDetails.approvalDate}</p>
+                <p><MdAdminPanelSettings /> <strong>CAF Admin:</strong> {requestDetails.cafAdmin}</p>
+                <p><MdAccountBalanceWallet /> <strong>Budget ID:</strong> {requestDetails.budgetID}</p>
             </div>
             <button className="back-button" onClick={() => navigate(-1)}>Back to All Requests</button>
         </div>

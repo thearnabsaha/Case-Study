@@ -22,9 +22,6 @@ const Profile = () => {
                     <p><strong>Employee Code:</strong> {profileData.employeeCode}</p>
                     <p><strong>Territory:</strong> {profileData.territory}</p>
                     <p><strong>Email:</strong> {profileData.email}</p>
-                    {/* <p><strong>Position:</strong> {profileData.position}</p> */}
-                    {/* <p><strong>Department:</strong> {profileData.department}</p> */}
-                    {/* <p><strong>Phone:</strong> {profileData.phone}</p> */}
                 </div>
             </div>
         </div>

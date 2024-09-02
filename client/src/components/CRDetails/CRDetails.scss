@@ -1,69 +1,118 @@
+
+// Reset the padding and margins for the entire document
+html, body {
+    height: 100%; // Ensures full height of the viewport
+    margin: 0; // Removes default margin
+    padding: 0; // Removes default padding
+    box-sizing: border-box; // Changes the box-model to include padding and border in the element's total width and height
+}
+
 .cr-details {
-    padding: 20px;
-    background-color: var(--dgrey);
-    border-radius: 10px;
-    color: var(--white);
+    width: 100vw; // Ensures the container takes up the full viewport width
+    height: 100vh; // Ensures the container takes up the full viewport height
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8); // Semi-transparent white for glass effect
+    backdrop-filter: blur(10px); // Frosted glass effect
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-image: url('../../assets/a.avif'); // Path to your background image
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box; // Ensure padding does not affect the overall dimensions set
 
     h2 {
         color: var(--yellow);
-        border-bottom: 2px solid var(--tangarine);
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        font-size: 24px;
+        font-size: 2rem;
         text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--tangarine);
     }
 
     .details {
+        background: rgba(255, 255, 255, 0.1); // Light background for contrast
+        padding: 20px;
+        border-radius: 15px;
         margin-bottom: 20px;
+        width: 40%; // Ensures it fills the width of its parent
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.2);
 
         p {
-            font-size: 18px;
-            margin: 8px 0;
-
+            color: var(--white);
+            font-size: 1.2rem;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
             strong {
-                color: var(--tangarine);
+                color: var(--orange);
+                font-weight: bold;
+                margin:0rem .5rem;
             }
         }
     }
 
     .actions {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        width: 45%; // Ensures the buttons fill the width of their parent
 
         button {
             padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 10px;
             border: none;
-            border-radius: 8px;
-            font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s;
-
+            transition: background-color 0.3s, transform 0.3s;
+            color: var(--white);
+            cursor: pointer;
             &.approve {
-                background-color: var(--green);
-                color: var(--black);
-
+                background-color: var(--orange);
                 &:hover {
-                    background-color: var(--vlgrey);
+                    background-color: var(--tangarine);
+                    transform: translateY(-2px);
                 }
             }
 
             &.reject {
                 background-color: var(--red);
-                color: var(--black);
-
                 &:hover {
-                    background-color: var(--orange);
+                    background-color: var(--rose);
+                    transform: translateY(-2px);
                 }
             }
 
             &.back {
                 background-color: var(--mgrey);
-                color: var(--white);
-
                 &:hover {
                     background-color: var(--lgrey);
+                    transform: translateY(-2px);
                 }
             }
         }
     }
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    z-index: 1000; // Ensure it's on top of other elements
+    text-align: center;
+    min-width: 200px;
+}
+
+.cr-details {
+    position: relative;
+    z-index: 1;
+    // rest of your styles
 }

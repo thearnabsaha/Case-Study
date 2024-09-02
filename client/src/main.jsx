@@ -9,6 +9,8 @@ import RequesterDashBoard from './components/RequesterDashBoard/RequesterDashBoa
 import RequestDetails from './components/RequestDetails/RequestDetails.jsx'
 import CafDashboard from './Pages/CafDashboard/CafDashboard.jsx'
 import CRDetails from './components/CRDetails/CRDetails.jsx'
+import TDashboard from './Pages/TDashboard/TDashboard.jsx'
+import TRDetails from './components/TRDetails/TRDetails.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,12 +30,20 @@ const router = createBrowserRouter([
         element:<CafDashboard/>
       },
       {
+        path:"/thome",
+        element:<TDashboard/>
+      },
+      {
         path:"/request-details/:requestID",
         element:<RequestDetails />
       },
       {
         path:"/cr-details/:requestID",
         element:<CRDetails />
+      },
+      {
+        path:"/t-details/:requestID",
+        element:<TRDetails />
       },
       {
         path:"*",              

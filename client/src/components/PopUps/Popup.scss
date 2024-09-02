@@ -1,0 +1,50 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+.popup-content {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 300px;
+    font-size: 48px;
+    color: #FFF;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.animate-approve {
+    background-color: #4CAF50;  // Green background
+    animation: pulse-approve 0.5s;
+}
+
+.animate-reject {
+    background-color: #F44336;  // Red background
+    animation: pulse-reject 0.5s;
+}
+
+@keyframes pulse-approve {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes pulse-reject {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
